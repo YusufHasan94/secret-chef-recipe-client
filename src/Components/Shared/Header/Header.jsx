@@ -1,7 +1,8 @@
 import React from 'react';
 import NavLink from '../NavBar/NavLink/NavLink';
 import { HiUserCircle } from "react-icons/hi";
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import chef from "../../../assets/chef.png";
+import { Container, Image, Nav, Navbar } from 'react-bootstrap';
 
 const Header = () => {
     const routes = [
@@ -15,6 +16,7 @@ const Header = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
+                <Image src={chef} roundedCircle style={{width: "50px"}} />
                 <Navbar.Brand>Secret-chef-recipe</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
