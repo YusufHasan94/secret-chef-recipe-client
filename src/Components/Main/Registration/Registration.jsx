@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Registration = () => {
