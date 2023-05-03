@@ -7,14 +7,14 @@ const Chef = ({chef}) => {
     //console.log(Chef)
     return (
         <div>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '22rem' }}>
                 <Card.Img variant="top" src={picture} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text className='m-0'><span className='fw-semibold'>Year of experience: </span>{years_of_experience} years</Card.Text>
                     <Card.Text className='m-0'><span className='fw-semibold'>Numbers of recipes: </span>{number_of_recipes}</Card.Text>
                     <Card.Text className='mb-2'><span className='fw-semibold'>Likes: </span>{likes}</Card.Text>
-                    <Button variant="primary">View Recipes</Button>
+                    <Button variant="warning fw-semibold">View Recipes</Button>
                 </Card.Body>
             </Card>
         </div>
