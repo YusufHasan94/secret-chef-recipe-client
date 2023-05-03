@@ -8,7 +8,7 @@ const Chef = ({chef}) => {
     return (
         <div>
             <Card style={{ width: '20rem' }}>
-                <Card.Img variant="top" src={picture} />
+                <Card.Img variant="top" src={picture} style={{height: "18rem"}} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text className='m-0'><span className='fw-semibold'>Year of experience: </span>{years_of_experience} years</Card.Text>
