@@ -5,3 +5,8 @@
     align-items: center;
     justify-items: center;
 }
+@media (max-width: 576px){
+    .chefsContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

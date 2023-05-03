@@ -7,7 +7,7 @@ const Chef = ({chef}) => {
     //console.log(Chef)
     return (
         <div>
-            <Card style={{ width: '22rem' }}>
+            <Card style={{ width: '20rem' }}>
                 <Card.Img variant="top" src={picture} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>

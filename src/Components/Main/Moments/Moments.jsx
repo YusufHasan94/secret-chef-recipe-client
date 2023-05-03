@@ -16,14 +16,14 @@ const Moments = () => {
                     <div className='col'>
                         <img src={img2} className='w-100' alt="" />
                     </div>
-                    <div className='d-flex flex-column col'>
+                    <div className='d-flex flex-column justify-content-center col'>
                         <img src={img3} className='w-100' alt="" />
                         <img src={img4} className='w-100' alt="" />
                     </div>
                     <div className='col'>
                         <img src={img1} className='w-100' alt="" />
                     </div>
-                    <div className='d-flex flex-column col'>
+                    <div className='d-flex flex-column justify-content-center col'>
                         <img src={img5} className='w-100' alt="" />
                         <img src={img6} className='w-100' alt="" />
                     </div>
