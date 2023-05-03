@@ -5,13 +5,13 @@
     color: white;
     padding: 20px;
     position: absolute;
-    bottom: 40%;
-    right: 50%;
+    top: 30%;
+    right: 40%;
     font-size: 22px;
 }
 @media (max-width: 576px) {
     .bannerContent{
-        bottom: 0;
+        top: 0;
         right: 0;
         font-size: 15px;
         font-weight: 500;

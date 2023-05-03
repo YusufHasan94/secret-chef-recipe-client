@@ -1,5 +1,5 @@
 import React from 'react';
-import Banner1 from "../../../assets/FoodBanner4.jpg";
+import Banner1 from "../../../assets/FoodBanner3.jpg";
 import "./Banner.css";
 
 const Banner = () => {
@@ -7,8 +7,8 @@ const Banner = () => {
         <div className='bannerContainer'>
             <img className="d-block w-100" src={Banner1} alt="" />
             <div className='bannerContent'>
-                <h1 className=''>Bangladeshi <span className='text-warning'>Cuisine</span></h1>
-                <p className=''>Bangladesh is famous for its delicious food and desserts. The speciality of Bangladesh food is they are spicy. Rice is the main food in Bangladesh. Rice, fish curry, and lentil is the most common traditional Bangladeshi food for the general people.</p>
+                <h1 className=''>Italian <span className='text-warning'>Cuisine</span></h1>
+                <p className=''>Italian cuisine is a Mediterranean cuisine consisting of the ingredients, recipes and cooking techniques developed across the Italian Peninsula and later spread around the world together with waves of Italian diaspora. Some of these foods were imported from other cultures.</p>
             </div>
         </div>
     );

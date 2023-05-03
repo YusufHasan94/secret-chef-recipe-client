@@ -12,11 +12,11 @@ const Header = () => {
                 <Navbar.Brand className='fs-3'>Secret Chef Recipe</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
-                <Nav className='flex-grow-1 ms-md-5 gap-md-4 fs-5'>
+                <Nav className='flex-grow-1 ms-md-5 gap-md-4 fs-5 '>
                     <ActiveLink to="/">Home</ActiveLink>
                     <ActiveLink to="/blogs">Blog</ActiveLink>
                 </Nav>
-                <Nav className='d-flex align-items-center gap-2 fs-5'>
+                <Nav className='gap-2 fs-5'>
                     <HiUserCircle className='fs-3'/>
                     <ActiveLink to="/login">Log In</ActiveLink>
                     <ActiveLink to="/">Log Out</ActiveLink>

@@ -8,11 +8,11 @@ const Login = () => {
             <Container className='d-flex flex-column align-items-center justify-content-center' style={{height: "700px"}}>
                 <h1 className='text-center fs-2'>Log In</h1>
                 <Form className='d-flex flex-column align-items-center w-100'>
-                    <Form.Group className="my-1 w-50" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="my-1 w-75" controlId="exampleForm.ControlInput1">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="name@example.com" />
                     </Form.Group>
-                    <Form.Group className="my-1 w-50" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="my-1 w-75" controlId="exampleForm.ControlInput1">
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password"/>
                     </Form.Group>

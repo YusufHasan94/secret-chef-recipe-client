@@ -8,19 +8,19 @@ const Registration = () => {
             <Container className='d-flex flex-column align-items-center justify-content-center' style={{height: "700px"}}>
                 <h1 className='text-center fs-2'>Registration</h1>
                 <Form className='d-flex flex-column align-items-center w-100'>
-                    <Form.Group className="my-1 w-50" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="my-1 w-75" controlId="exampleForm.ControlInput1">
                         <Form.Label>Name</Form.Label>
                         <Form.Control type="text" placeholder='Your Name'/>
                     </Form.Group>
-                    <Form.Group className="my-1 w-50" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="my-1 w-75" controlId="exampleForm.ControlInput1">
                         <Form.Label>Email</Form.Label>
                         <Form.Control type="Email" placeholder='Your Email Address'/>
                     </Form.Group>
-                    <Form.Group className="my-1 w-50" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="my-1 w-75" controlId="exampleForm.ControlInput1">
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder='Use Strong Password'/>
                     </Form.Group>
-                    <Form.Group className="my-1 w-50" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="my-1 w-75" controlId="exampleForm.ControlInput1">
                         <Form.Label>Photo URL</Form.Label>
                         <Form.Control type='file' placeholder='Your Name'/>
                     </Form.Group>
