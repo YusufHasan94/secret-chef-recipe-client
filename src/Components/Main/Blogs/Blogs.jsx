@@ -1,6 +1,5 @@
 import React from 'react';
 import { Accordion, Container } from 'react-bootstrap';
-import LazyLoad from 'react-lazy-load';
 
 const Blogs = () => {
     return(
@@ -16,31 +15,32 @@ const Blogs = () => {
                 <Accordion.Item eventKey="1">
                     <Accordion.Header> <h4>2. How to validate React props using PropTypes</h4> </Accordion.Header>
                     <Accordion.Body>
-                    
+                    Props are mainly used to pass data from one components to another. PropTypes allows to define the type of the props that component should expect. This will prove useful because of catching errors early. There are some proptypes "PropsTypes.array", "PropsTypes.boo;", "PropsTypes.string", etc. Example: <pre>
+                        {
+                        `
+                            function MyComponent(props) {
+                                return <div>{props.message}</div>;
+                            }
+                            MyComponent.propTypes = {
+                                message: PropTypes.string.isRequired,
+                            };
+                        `
+                         }
+                        </pre> 
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
                     <Accordion.Header> <h4>3. Tell us the difference between nodejs and express js.</h4> </Accordion.Header>
                     <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    Node js is an open source cross platform runtime environment for executing JS code outside of browser. This platform basically used to build i/o, server-side apps. This build on google's V8 engine. Runtime platform or environment designing for server side execution of javaScript.
+                    <br />
+                    On the other hand, Express js is a small framework that sits on top of Node js web functionality to simplify its APIs. Its facilitates the rendering of dynamic HTTP objects. This build on Node js. written in javascript. This is a framework based on Node js. 
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="4">
                     <Accordion.Header> <h4>4. What is a custom hook, and why will you create a custom hook?</h4> </Accordion.Header>
                     <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    Custom hook are reusable functions that are can be used by developer. Using custom hook some there some special and unique functionality can be added. Custom hook always starts with the name 'use'. The advantage of custom hook is reusability, readability, and testability. And that's the reason developers like it most. 
                     </Accordion.Body>
                 </Accordion.Item>
 
