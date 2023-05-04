@@ -1,12 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { Button, Container, Form, FormText } from 'react-bootstrap';
 import { FaGoogle, FaGithub } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 const Login = () => {
     const {loginUser} = useContext(AuthContext);
     const [error, setError] = useState();
     const [success, setSuccess] = useState();
+    const navigate = useNavigate();
+    
+    const location = useLocation();
+    //redirect to the location
+    const from = location.state?.from?.pathname || "/";
     const handleLogin = event=>{
         setError('');
         setSuccess('');
@@ -16,8 +21,11 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
         loginUser(email, password)
-        .then(() => {
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
             setSuccess("login successfully");
+            navigate(from);
         }
         )
         .catch(error =>{ 

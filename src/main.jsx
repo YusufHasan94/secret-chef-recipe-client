@@ -11,6 +11,7 @@ import Registration from './Components/Main/Registration/Registration';
 import Recipes from './Components/Main/Recipes/Recipes';
 import AuthProvider from './providers/AuthProvider';
 import Error from './Components/Error/Error';
+import PrivateRoute from './Components/Main/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/chef-recipes/:id",
-        element: <Recipes></Recipes>,
+        element: <PrivateRoute><Recipes></Recipes></PrivateRoute>,
         loader: ({params})=> fetch(`https://secret-chef-recipe-server-yusufhasan94.vercel.app/chefs/${params.id}`)
       }
     ]

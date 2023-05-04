@@ -4,7 +4,7 @@ import "./Banner.css";
 
 const Banner = () => {
     return (
-        <div className='bannerContainer'>
+        <div className='bannerContainer mt-0 mt-md-5'>
             <img className="d-block w-100" src={Banner1} alt="" />
             <div className='bannerContent'>
                 <h1 className=''>Italian <span className='text-warning'>Cuisine</span></h1>
