@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Marquee from "react-fast-marquee";
 import LazyLoad from 'react-lazy-load';
-import { AuthContext } from '../../../providers/AuthProvider';
 import { Spinner } from 'react-bootstrap';
 
 const FamousFood = () => {

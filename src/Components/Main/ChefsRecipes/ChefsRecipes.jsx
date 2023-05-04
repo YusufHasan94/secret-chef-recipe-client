@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardGroup, Container } from 'react-bootstrap';
+import { CardGroup, Container } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import RecipeCard from '../RecipeCard/RecipeCard';
 import LazyLoad from 'react-lazy-load';

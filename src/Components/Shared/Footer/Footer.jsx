@@ -1,12 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import img from "../../../assets/chef.png";
 import { FaFacebookF, FaTwitter, FaInstagram, FaRegCopyright } from "react-icons/fa";
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../providers/AuthProvider';
 
 const Footer = () => {
-    const {user} = useContext(AuthContext);
     return (
         <div className='bg-dark text-white'>
             <Container>
