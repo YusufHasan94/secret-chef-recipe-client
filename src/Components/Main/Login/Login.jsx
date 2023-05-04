@@ -16,14 +16,14 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
         loginUser(email, password)
-        .then(res => {
-            console.log(res);
+        .then(() => {
             setSuccess("login successfully");
         }
         )
         .catch(error =>{ 
            setError(error.message);
         })
+        form.reset('');
     }
     return (
         <div>
