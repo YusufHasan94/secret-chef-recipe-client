@@ -7,7 +7,6 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import { Link } from 'react-router-dom';
 import 'react-tooltip/dist/react-tooltip.css';
 import { Tooltip } from 'react-tooltip';
-import "./Header.css";
 
 const Header = () => {
     const {user, logOut} = useContext(AuthContext);
@@ -34,7 +33,7 @@ const Header = () => {
                                 <img 
                                 className='user'
                                 src={user.photoURL}
-                                style={{width:"40px", height: "40px", borderRadius: "50%" }}
+                                style={{width:"40px", height: "40px", borderRadius: "50%" , border: "1px solid black" }}
                                 data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName?user.displayName : ''}
                                 />
                                 :<HiUserCircle 
