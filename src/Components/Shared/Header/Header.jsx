@@ -13,7 +13,7 @@ const Header = () => {
     const {user, logOut} = useContext(AuthContext);
     const handleLogout = event =>{
         logOut()
-        .then(res => console.log("successfully login"))
+        .then()
         .catch(error => console.log(error))
     }
     return (

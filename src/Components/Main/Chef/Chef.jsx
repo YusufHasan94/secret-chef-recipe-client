@@ -2,13 +2,16 @@ import React from 'react';
 import "./Chef.css";
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 const Chef = ({chef}) => {
     const {id, name, picture, years_of_experience, number_of_recipes, likes} = chef;
     return (
         <div>
             <Card style={{ width: '20rem' }}>
-                <Card.Img variant="top" src={picture} style={{height: "18rem"}} />
+                <LazyLoad threshold={0.05}>
+                    <Card.Img variant="top" src={picture} style={{height: "18rem"}} />  
+                </LazyLoad>
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text className='m-0'><span className='fw-semibold'>Year of experience: </span>{years_of_experience} years</Card.Text>

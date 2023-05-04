@@ -3,7 +3,7 @@ import "./Chefs.css";
 import Chef from '../Chef/Chef';
 
 const Chefs = () => {
-    const [chefs, setChefs] = useState([]);
+    const [chefs, setChefs] = useState([]); 
     useEffect(()=>{
         fetch('https://secret-chef-recipe-server-yusufhasan94.vercel.app/chefs')
         .then(res => res.json())

@@ -12,6 +12,7 @@ const Login = () => {
     const location = useLocation();
     //redirect to the location
     const from = location.state?.from?.pathname || "/";
+    //handle login
     const handleLogin = event=>{
         setError('');
         setSuccess('');
@@ -19,18 +20,18 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
         loginUser(email, password)
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
             setSuccess("login successfully");
-            navigate(from);
+            navigate(from , {replace: true});
         }
         )
         .catch(error =>{ 
            setError(error.message);
         })
+        //use to reset form value 
         form.reset('');
     }
     return (
