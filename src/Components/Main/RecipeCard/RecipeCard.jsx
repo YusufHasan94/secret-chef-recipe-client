@@ -3,6 +3,9 @@ import { Card } from 'react-bootstrap';
 import { FaRegBookmark } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css'
+
 
 const RecipeCard = ({recipe}) => {
     const {id, name, ingredients, method, rating} = recipe;
@@ -33,7 +36,10 @@ const RecipeCard = ({recipe}) => {
                 </div>
             </Card.Body>
             <Card.Footer className='d-flex justify-content-between'>
-                <p className='m-0'>Rating: {rating}</p>
+                <div className='d-flex align-items-center'>
+                    <Rating style={{ maxWidth: 100}} value={rating} readOnly />
+                    <p className='m-0'>{rating}</p>
+                </div>
                 <button onClick={handleFavorite} className='border-0 bg-transparent'><FaRegBookmark></FaRegBookmark></button>
             </Card.Footer>
         </Card>

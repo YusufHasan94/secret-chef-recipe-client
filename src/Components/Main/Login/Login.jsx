@@ -42,7 +42,7 @@ const Login = () => {
         .then(res=>{
             const loggedUser = res.user;
             console.log(loggedUser);
-            navigate(navigate(from , {replace: true}));
+            navigate(from , {replace: true});
         })
         .catch(error => console.log(error.message));
     }

@@ -6,6 +6,7 @@ import img4 from "../../../assets/CookingScene/scene4.jpg";
 import img5 from "../../../assets/CookingScene/scene5.jpg";
 import img6 from "../../../assets/CookingScene/scene6.jpg";
 import { Container } from 'react-bootstrap';
+import LazyLoad from 'react-lazy-load';
 
 const Moments = () => {
     return (
@@ -16,9 +17,9 @@ const Moments = () => {
                     <div className='col'>
                         <img src={img2} className='w-100' alt="" />
                     </div>
-                    <div className='d-flex flex-column justify-content-center col'>
-                        <img src={img3} className='w-100' alt="" />
-                        <img src={img4} className='w-100' alt="" />
+                    <div className='d-flex flex-column justify-content-center col'>                        
+                            <img src={img3} className='w-100' alt="" />
+                            <img src={img4} className='w-100' alt="" />
                     </div>
                     <div className='col'>
                         <img src={img1} className='w-100' alt="" />
