@@ -9,7 +9,7 @@ const Chef = ({chef}) => {
     return (
         <div>
             <Card style={{ width: '20rem' }}>
-                <LazyLoad threshold={0.05}>
+                <LazyLoad>
                     <Card.Img variant="top" src={picture} style={{height: "18rem"}} />  
                 </LazyLoad>
                 <Card.Body>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardGroup, Container } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import RecipeCard from '../RecipeCard/RecipeCard';
+import LazyLoad from 'react-lazy-load';
 
 const Recipes = () => {
     const recipes = useLoaderData();
@@ -19,7 +20,9 @@ const Recipes = () => {
                         <p className='my-1 fs-5'><span className='fw-semibold'>years of experience: </span>{years_of_experience}</p>
                     </div>
                     <div className='w-100 d-flex justify-content-center'>
-                        <img src={picture} className='w-100' alt="" />
+                        <LazyLoad>
+                            <img src={picture} className='w-100' alt="" />
+                        </LazyLoad>
                     </div>
                 </div>
                 <div className='my-5'>
