@@ -2,6 +2,7 @@ import React from 'react';
 import img from "../../../assets/chef.png";
 import { FaFacebookF, FaTwitter, FaInstagram, FaRegCopyright } from "react-icons/fa";
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -15,19 +16,29 @@ const Footer = () => {
                     <div className="col-md-4 col-12">
                         <h4>Important Links</h4>
                         <ul className='list-unstyled ms-4'>
-                            <li>Home</li>
-                            <li>Blogs</li>
-                            <li>Sign In</li>
-                            <li>Sign Up</li>
-                            <li></li>
+                            <li><Link to="/" className='text-decoration-none text-white'>Home</Link></li>
+                            <li><Link to="/blogs" className='text-decoration-none text-white'>Blogs</Link></li>
+                            <li><Link to="/login" className='text-decoration-none text-white'>Log In</Link></li>
+                            <li><Link to="/registration" className='text-decoration-none text-white'>Registration</Link></li>
                         </ul>
                     </div>
                     <div className="col-md-3 col-12">
                         <h4>Social Media</h4>
                         <ul className='list-unstyled ms-4'>
-                            <li><FaFacebookF className='fs-4'/> Facebook</li>
-                            <li><FaInstagram className='fs-4'/> Instagram</li>
-                            <li><FaTwitter className='fs-4'/> Twitter</li>
+                            <li>
+                                <Link className='text-decoration-none text-white'>  
+                                    <FaFacebookF className='fs-4'/> Facebook
+                                </Link>
+                            </li>
+                            <li>
+                                <Link className='text-decoration-none text-white'>  
+                                <FaInstagram className='fs-4'/> Instagram
+                                </Link>
+                            </li><li>
+                                <Link className='text-decoration-none text-white'>  
+                                    <FaTwitter className='fs-4'/> Twitter
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

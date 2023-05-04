@@ -7,7 +7,6 @@ const Recipes = () => {
     const recipes = useLoaderData();
     const {id, likes, name, number_of_recipes, picture, years_of_experience, description} = recipes;
     const allRecipes = recipes.recipes;
-    console.log(recipes.recipes);
     return (
         <div className='my-4'>
             <Container className='my-5'>
