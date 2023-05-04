@@ -34,7 +34,7 @@ const Registration = () => {
     return (
         <div>
             <Container className='d-flex flex-column align-items-center justify-content-center' style={{height: "700px"}}>
-                <h1 className='text-center fs-2'>Registration</h1>
+                <h1 className='text-center fs-2'>Sign Up Now</h1>
                 <Form onSubmit={handleRegistration} className='d-flex flex-column align-items-center w-100'>
                     <Form.Group className="my-1 w-75" controlId="name">
                         <Form.Label>Name</Form.Label>

@@ -1,44 +1,37 @@
-import React from 'react';
-import FF1 from "../../../assets/FamousFood/FamousFood1.jpg";
-import FF2 from "../../../assets/FamousFood/FamousFood2.jpg";
-import FF3 from "../../../assets/FamousFood/FamousFood3.jpg";
-import FF4 from "../../../assets/FamousFood/FamousFood4.jpg";
-import FF5 from "../../../assets/FamousFood/FamousFood5.jpg";
+import React, { useContext, useEffect, useState } from 'react';
 import Marquee from "react-fast-marquee";
 import LazyLoad from 'react-lazy-load';
+import { AuthContext } from '../../../providers/AuthProvider';
+import { Spinner } from 'react-bootstrap';
 
 const FamousFood = () => {
+    const [foods, setFoods] = useState();
+    useEffect(()=>{
+        fetch("https://secret-chef-recipe-server-yusufhasan94.vercel.app/foods")
+        .then(res=>res.json())
+        .then(data=>setFoods(data))
+        .catch(error=>console.log(error.message));
+    },[])
     return (
         <div className='my-4'>
             <h1 className='text-center'>Famous Foods</h1>
-            <div className='my-4'>
+            <div className='my-4'>{
+                foods?
                 <Marquee className='overflow-hidden'>
-                    <div className='' style={{width: "500px", height: "250px"}}>
-                        <LazyLoad>
-                            <img src={FF1} className='w-100' alt="" />
-                        </LazyLoad>
-                    </div>
-                    <div className='' style={{width: "500px", height: "250px"}}>
-                        <LazyLoad>
-                            <img src={FF2} className='w-100' alt="" />
-                        </LazyLoad>
-                    </div>
-                    <div className='' style={{width: "500px", height: "250px"}}>
-                        <LazyLoad>
-                            <img src={FF3} className='w-100' alt="" />
-                        </LazyLoad>
-                    </div>
-                    <div className='' style={{width: "500px", height: "250px"}}>
-                        <LazyLoad>
-                            <img src={FF4} className='w-100' alt="" />
-                        </LazyLoad>
-                    </div>
-                     <div className='' style={{width: "500px", height: "250px"}}>
-                        <LazyLoad>
-                            <img src={FF5} className='w-100' alt="" />
-                        </LazyLoad>
-                    </div>
+                    {   
+                        foods.map(food=> 
+                            <div className='' style={{width: "500px", height: "250px"}} key={food.id}>
+                                <LazyLoad>
+                                    <img src={food.image} className='w-100' alt="" />
+                                </LazyLoad>
+                            </div>
+                        )
+                    }
                 </Marquee>
+                :<div className='d-flex justify-content-center'>
+                    <Spinner animation="border" variant="secondary" />
+                </div>
+                }
             </div>
         </div>
     );

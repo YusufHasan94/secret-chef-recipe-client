@@ -84,7 +84,7 @@ const Login = () => {
                         </Button>
                     </Form.Text>
                     <Form.Text className='fs-5 text-dark'>
-                        Don't have account? <Link to="/registration" className='text-decoration-none'>Register</Link>
+                        Don't have an account? <Link to="/registration" className='text-decoration-none'>Sign Up</Link>
                     </Form.Text>
                 </Form>
                 <span className='text-danger'>{error}</span>

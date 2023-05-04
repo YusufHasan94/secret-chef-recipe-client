@@ -1,10 +1,19 @@
-import React from 'react';
-import { Accordion, Container } from 'react-bootstrap';
+import React, { useRef } from 'react';
+import { Accordion, Button, Container } from 'react-bootstrap';
+import Pdf from 'react-to-pdf';
 
 const Blogs = () => {
+    const ref = useRef();
     return(
         <Container className='my-5'>
-            <Accordion defaultActiveKey="0">
+            <div className="my-4 text-end">
+                <Pdf targetRef={ref} filename="document.pdf">
+                    {({ toPdf }) => (
+                        <Button onClick={toPdf} className='bg-transparent text-dark border-warning fw-semibold'>Download As PDF</Button>
+                    )}
+                </Pdf>
+            </div>
+            <Accordion defaultActiveKey="0" ref={ref}>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header> <h4>1. Tell us the differences between uncontrolled and controlled components.</h4> </Accordion.Header>
                     <Accordion.Body>

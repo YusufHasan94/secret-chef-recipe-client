@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { FaRegBookmark } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Rating } from '@smastrom/react-rating';
@@ -9,11 +9,11 @@ import '@smastrom/react-rating/style.css'
 
 const RecipeCard = ({recipe}) => {
     const {id, name, ingredients, method, rating} = recipe;
+    let [status, setStatus] = useState(false);
     const handleFavorite = event =>{
-        event.currentTarget.disabled = true;
-        console.log("btn clicked");
         toast("Recipe added to favorite list");
-        return;
+        setStatus(true);
+        console.log(status); 
     }
     return (
         <Card style={{ width: '22rem'}} className=''>
@@ -40,7 +40,7 @@ const RecipeCard = ({recipe}) => {
                     <Rating style={{ maxWidth: 100}} value={rating} readOnly />
                     <p className='m-0'>{rating}</p>
                 </div>
-                <button onClick={handleFavorite} className='border-0 bg-transparent'><FaRegBookmark></FaRegBookmark></button>
+                <button onClick={handleFavorite} disabled={status} className='border-0 bg-transparent'><FaRegHeart></FaRegHeart></button>
             </Card.Footer>
         </Card>
         

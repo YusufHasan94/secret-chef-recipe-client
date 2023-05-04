@@ -8,10 +8,10 @@ import Main from './Components/Main/Home/Main/Main';
 import Blogs from './Components/Main/Blogs/Blogs';
 import Login from './Components/Main/Login/Login';
 import Registration from './Components/Main/Registration/Registration';
-import Recipes from './Components/Main/Recipes/Recipes';
 import AuthProvider from './providers/AuthProvider';
 import Error from './Components/Error/Error';
 import PrivateRoute from './Components/Main/PrivateRoute/PrivateRoute';
+import ChefsRecipes from './Components/Main/ChefsRecipes/ChefsRecipes';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/chef-recipes/:id",
-        element: <PrivateRoute><Recipes></Recipes></PrivateRoute>,
+        element: <PrivateRoute><ChefsRecipes></ChefsRecipes></PrivateRoute>,
         loader: ({params})=> fetch(`https://secret-chef-recipe-server-yusufhasan94.vercel.app/chefs/${params.id}`)
       }
     ]

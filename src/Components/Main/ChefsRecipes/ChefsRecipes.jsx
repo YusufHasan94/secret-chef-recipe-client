@@ -1,10 +1,11 @@
 import React from 'react';
-import { Card, CardGroup, Container } from 'react-bootstrap';
+import { Button, Card, CardGroup, Container } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import RecipeCard from '../RecipeCard/RecipeCard';
 import LazyLoad from 'react-lazy-load';
+import { FaRegThumbsUp } from "react-icons/fa";
 
-const Recipes = () => {
+const ChefsRecipes = () => {
     const recipes = useLoaderData();
     const {id, likes, name, number_of_recipes, picture, years_of_experience, description} = recipes;
     const allRecipes = recipes.recipes;
@@ -15,9 +16,9 @@ const Recipes = () => {
                     <div className='w-100 my-auto'>
                         <h1>{name}</h1>
                         <p className='my-1'>{description}</p>
-                        <p className='my-1 fs-5'><span className='fw-semibold'>Likes: </span>{likes}</p>
-                        <p className='my-1 fs-5'><span className='fw-semibold'>number of recipes: </span>{number_of_recipes}</p>
-                        <p className='my-1 fs-5'><span className='fw-semibold'>years of experience: </span>{years_of_experience}</p>
+                        <p className='my-1 fs-5 d-flex align-items-center'>{likes}<FaRegThumbsUp className='ms-2 text-primary fs-4'></FaRegThumbsUp></p>
+                        <p className='my-1 fs-5'><span className='fw-semibold'>Number of recipes: </span>{number_of_recipes}</p>
+                        <p className='my-1 fs-5'><span className='fw-semibold'>Years of experience: </span>{years_of_experience}</p>
                     </div>
                     <div className='w-100 d-flex justify-content-center'>
                         <LazyLoad>
@@ -40,4 +41,4 @@ const Recipes = () => {
     );
 };
 
-export default Recipes;
+export default ChefsRecipes;

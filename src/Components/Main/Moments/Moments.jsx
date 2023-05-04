@@ -6,7 +6,6 @@ import img4 from "../../../assets/CookingScene/scene4.jpg";
 import img5 from "../../../assets/CookingScene/scene5.jpg";
 import img6 from "../../../assets/CookingScene/scene6.jpg";
 import { Container } from 'react-bootstrap';
-import LazyLoad from 'react-lazy-load';
 
 const Moments = () => {
     return (

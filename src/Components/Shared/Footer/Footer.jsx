@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import img from "../../../assets/chef.png";
 import { FaFacebookF, FaTwitter, FaInstagram, FaRegCopyright } from "react-icons/fa";
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Footer = () => {
+    const {user} = useContext(AuthContext);
     return (
         <div className='bg-dark text-white'>
             <Container>
@@ -18,8 +20,7 @@ const Footer = () => {
                         <ul className='list-unstyled ms-4'>
                             <li><Link to="/" className='text-decoration-none text-white'>Home</Link></li>
                             <li><Link to="/blogs" className='text-decoration-none text-white'>Blogs</Link></li>
-                            <li><Link to="/login" className='text-decoration-none text-white'>Log In</Link></li>
-                            <li><Link to="/registration" className='text-decoration-none text-white'>Registration</Link></li>
+                            <li><Link to="/registration" className='text-decoration-none text-white'>Sign Up</Link></li>
                         </ul>
                     </div>
                     <div className="col-md-3 col-12">
