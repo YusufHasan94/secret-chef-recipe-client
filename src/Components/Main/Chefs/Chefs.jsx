@@ -6,7 +6,7 @@ import { Spinner } from 'react-bootstrap';
 const Chefs = () => {
     const [chefs, setChefs] = useState();
     useEffect(()=>{
-        fetch('https://secret-chef-recipe-server-yusufhasan94.vercel.app/chefs')
+        fetch('https://secret-chef-recipe-server.vercel.app/chefs')
         .then(res => res.json())
         .then(data => setChefs(data))
         .catch(error => console.error(error));

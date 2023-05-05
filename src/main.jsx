@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/chef-recipes/:id",
         element: <PrivateRoute><ChefsRecipes></ChefsRecipes></PrivateRoute>,
-        loader: ({params})=> fetch(`https://secret-chef-recipe-server-yusufhasan94.vercel.app/chefs/${params.id}`)
+        loader: ({params})=> fetch(`https://secret-chef-recipe-server.vercel.app/chefs/${params.id}`)
       }
     ]
   },

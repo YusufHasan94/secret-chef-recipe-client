@@ -6,7 +6,7 @@ import { Spinner } from 'react-bootstrap';
 const FamousFood = () => {
     const [foods, setFoods] = useState();
     useEffect(()=>{
-        fetch("https://secret-chef-recipe-server-yusufhasan94.vercel.app/foods")
+        fetch("https://secret-chef-recipe-server.vercel.app/foods")
         .then(res=>res.json())
         .then(data=>setFoods(data))
         .catch(error=>console.log(error.message));
