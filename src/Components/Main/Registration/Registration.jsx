@@ -53,7 +53,7 @@ const Registration = () => {
                         <Form.Control type="password" name='password' placeholder='Use Strong Password' required/>
                     </Form.Group>
                     <Button className='w-25 my-2' type='submit'>
-                        Register
+                        Sign Up
                     </Button>
                     <Form.Text className='fs-5 text-dark'>
                        Already have an account? please <Link to="/login" className='text-decoration-none'>Log In</Link>
